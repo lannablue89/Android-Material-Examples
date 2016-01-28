@@ -52,4 +52,5 @@ The Explode transition will translate out all elements mimicking an explosion.</
     <string name="transitions_activity2_help">This activity shows how to be aware of the events of transitions, animations and implement accordingly</string>
     <string name="header_transition_type">Transition type</string>
 
+    <string name="square_blue_name">square_blue</string>
 </resources>

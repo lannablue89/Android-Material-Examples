@@ -47,8 +47,7 @@ public class TransitionFirstActivity extends Activity
 
     @SuppressWarnings("unchecked")
     public void onFabCLick(View view) {
-        Intent i  = new Intent (TransitionFirstActivity.this,
-            TransitionSecondActivity.class);
+        Intent i  = new Intent (TransitionFirstActivity.this, TransitionSecondActivity.class);
 
         ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
             TransitionFirstActivity.this, Pair.create(mFabButton, "fab"),
@@ -58,17 +57,22 @@ public class TransitionFirstActivity extends Activity
     }
 
     @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+        // Unused
+    }
+
+    @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         Transition exitTransition = null;
 
         switch (position) {
-            case 0:
+            case 0: // slide
                 exitTransition = createSlideTransition(Gravity.BOTTOM, EXCLUDED_VIEWS);
                 break;
-            case 1:
+            case 1: // fade
                 exitTransition = createFadeTransition(EXCLUDED_VIEWS);
                 break;
-            case 2:
+            case 2: // explode
                 exitTransition = createExplodeTransition(EXCLUDED_VIEWS);
                 break;
         }
@@ -101,11 +105,6 @@ public class TransitionFirstActivity extends Activity
             explodeTransition.excludeTarget(excludeViewId, true);
 
         return explodeTransition;
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-        // Unused
     }
 
 

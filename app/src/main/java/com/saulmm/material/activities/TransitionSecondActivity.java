@@ -64,7 +64,7 @@ public class TransitionSecondActivity extends Activity {
         for (int i = 0; i < rowContainer.getChildCount(); i++) {
             View rowView = rowContainer.getChildAt(i);
 
-            ViewPropertyAnimator propertyAnimator = rowView.animate()
+            rowView.animate()
                 .setStartDelay(i * SCALE_DELAY)
                 .scaleX(0).scaleY(0)
                 .setListener(new AnimatorAdapter() {

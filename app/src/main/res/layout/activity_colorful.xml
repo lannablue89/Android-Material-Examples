@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.saulmm.material.activities.ColorActivity">
+
+    <View
+        android:id="@+id/reveal_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:colorAccent"
+        android:elevation="5dp"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/activity_transition_header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?android:colorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/activity_transition_header2"
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:layout_below="@id/activity_transition_header"
+        android:background="?android:colorPrimary"
+        android:paddingLeft="72dp"
+        android:paddingRight="16dp"
+        android:transitionName="holder1">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="?android:colorAccent" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_text"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="34sp"
+            tools:text="Amazing text" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_transition_header2"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="Controls"
+            android:textColor="?android:colorAccent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/theme_switch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="7"
+                android:text="Awesome" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="More controls"
+            android:textColor="?android:colorAccent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/theme_check"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="7"
+                android:text="Awesome" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/circle_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/circle1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/color1"
+                android:clickable="true"
+                android:onClick="view" />
+
+            <View
+                android:id="@+id/circle2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/color2"
+                android:clickable="true"
+                android:onClick="view" />
+
+            <View
+                android:id="@+id/circle3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/color3"
+                android:clickable="true"
+                android:onClick="view" />
+
+            <View
+                android:id="@+id/circle4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/color4"
+                android:clickable="true"
+                android:onClick="view" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fab_button"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/activity_transition_header"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="-26dp"
+        android:background="@drawable/ripple_round"
+        android:elevation="4dp"
+        android:stateListAnimator="@anim/fab_anim"
+        android:transitionName="fab" />
+
+</RelativeLayout>

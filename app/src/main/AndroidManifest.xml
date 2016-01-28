@@ -1,50 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.saulmm.material"
-	>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.saulmm.material">
 
-	<application
-		android:allowBackup="true"
-		android:icon="@drawable/ic_launcher"
-		android:label="@string/app_name"
-		android:theme="@style/MaterialExamplesTheme"
-		>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MaterialExamplesTheme">
 
-		<activity
-			android:name=".activities.MainActivity"
-			android:theme="@style/MainActivityTheme"
-			>
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
-				<category android:name="android.intent.category.LAUNCHER"/>
-			</intent-filter>
-		</activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:theme="@style/MainActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-		<activity
-			android:name=".activities.TransitionFirstActivity"/>
+        <activity android:name=".activities.TransitionFirstActivity" />
 
-		<activity
-			android:name=".activities.TransitionSecondActivity"
-			/>
+        <activity android:name=".activities.TransitionSecondActivity" />
 
-		<activity
-			android:name=".activities.DialerSampleActivity"
-			android:screenOrientation="portrait"
-			/>
+        <activity
+            android:name=".activities.DialerSampleActivity"
+            android:screenOrientation="portrait" />
 
-		<activity
-			android:name=".activities.ColorActivity"
-			android:label="@string/title_activity_color"
-			android:theme="@style/ColorActivityTheme"
-			/>
+        <activity
+            android:name=".activities.ColorActivity"
+            android:label="@string/title_activity_color"
+            android:theme="@style/ColorActivityTheme" />
 
-		<activity
-			android:name=".activities.ColorActivity2"
-			android:theme="@style/ColorActivityTheme2"
-			/>
+        <activity
+            android:name=".activities.ColorActivity2"
+            android:theme="@style/ColorActivityTheme2" />
 
-		<activity android:name=".activities.SlidingActivity"/>
-		<activity android:name=".activities.CoordinatorActivity"/>
-	</application>
+        <activity android:name=".activities.SlidingActivity" />
+        <activity android:name=".activities.CoordinatorActivity" />
+
+
+        <!-- lanna -->
+        <activity android:name=".activities.MaterialResourcesActivity" >
+        </activity>
+
+
+        <activity
+            android:name=".activities.CustomizeTransitionsActivity1"
+            android:theme="@style/CustomizeTransitionsActivityTheme" >
+        </activity>
+        <activity
+            android:name=".activities.CustomizeTransitionsActivity2"
+            android:theme="@style/CustomizeTransitionsActivityTheme" />
+        <activity
+            android:name=".activities.CustomizeTransitionsActivity3"
+            android:theme="@style/CustomizeTransitionsActivityTheme" />
+
+        <!-- switch colored-themes -->
+        <activity
+            android:name=".activities.ColorfulActivity"
+            android:label="@string/title_activity_color">
+        </activity>
+        <activity
+            android:name=".activities.CustomDialogColorActivity"
+            android:theme="@style/MaterialExamplesTheme" >
+        </activity>
+
+    </application>
 </manifest>

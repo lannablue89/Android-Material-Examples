@@ -24,7 +24,6 @@ public class ColorActivity2 extends AppCompatActivity {
 		mContainer = findViewById(R.id.activity_color2_container);
 		mToolbar = (Toolbar) findViewById(R.id.activity_color2_toolbar);
 		mHelpText = (TextView) findViewById(R.id.activity_color2_explanation_textview);
-		mHelpText.setVisibility(View.VISIBLE);
 
 		Animation translateToolbarAnimation = AnimationUtils.loadAnimation(this, R.anim.translate_up_on);
 		mToolbar.setAnimation(translateToolbarAnimation);
@@ -38,6 +37,13 @@ public class ColorActivity2 extends AppCompatActivity {
 		animationSet.addAnimation(translateToolbarAnimation);
 		animationSet.addAnimation(fadeIn);
 		animationSet.start();
+
+		mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				onBackPressed();
+			}
+		});
 	}
 
 	@Override

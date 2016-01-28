@@ -7,6 +7,20 @@
     <color name="accent">#EEFF41</color>
     <color name="accent_dark">#8F9A17</color>
 
+    <color name="material_animations_accent">@color/accent</color>
+    <color name="material_animations_primary">@color/primary</color>
+    <color name="material_animations_primary_dark">@color/primary_dark</color>
+    <color name="text_dark">@color/black</color>
+    <color name="text_light">@color/gray_light</color>
+
+    <color name="gray_light">#EFEFEF</color>
+    <color name="light_grey">@color/gray_light</color>
+    <color name="white">@android:color/white</color>
+    <color name="black">@android:color/black</color>
+    <color name="red">#f00</color>
+    <color name="green">#0f0</color>
+    <color name="blue">#00f</color>
+
     <!-- Theme colors -->
     <color name="theme_light">#F48FB1</color>
     <color name="theme_default_primary">#EC407A</color>
@@ -32,9 +46,8 @@
     <color name="color_set_4_primary">#ff8a65</color>
     <color name="color_set_4_accent">#d500f9</color>
 
-
-    <color name="gray_light">#EFEFEF</color>
-
-
+    <color name="NORMAL_STATE_COLOR">@color/theme_light</color>
+    <color name="PRESSED_STATE_COLOR">@color/theme_dialer_high</color>
+    <color name="FOCUSED_STATE_COLOR">@color/color_set_3_primary</color>
 
 </resources>

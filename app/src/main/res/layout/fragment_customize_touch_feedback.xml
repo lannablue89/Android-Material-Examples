@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_light"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Button
+            style="@style/ButtonLarge"
+            android:text="default" />
+
+        <View style="@style/Divider.Horizontal" />
+
+        <Button
+            style="@style/ButtonLarge"
+            android:background="@drawable/button_shape"
+            android:elevation="@dimen/elevation_large"
+            android:text="bg shape + elevation large"
+            android:visibility="gone" />
+
+        <Button
+            style="@style/ButtonLarge"
+            android:background="@color/white"
+            android:elevation="@dimen/elevation_micro"
+            android:text="bg white + elevation micro"
+            android:visibility="gone" />
+
+        <View style="@style/Divider.Horizontal" />
+
+        <Button
+            style="@style/ButtonLarge"
+            android:background="?attr/selectableItemBackground"
+            android:text=" bg=?attr/selectableItemBackground "
+            android:textAllCaps="false"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                style="@style/ButtonLarge"
+                android:layout_width="@dimen/btn_height_normal_large"
+                android:layout_height="@dimen/btn_height_normal_large"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_ripple" />
+
+            <View style="@style/Divider.Vertical" />
+
+            <Button
+                style="@style/ButtonLarge"
+                android:layout_height="@dimen/btn_height_normal_large"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:text="bg=?attr/selectableItemBackground Borderless"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <Button
+            style="@style/ButtonLarge"
+            android:background="@drawable/button_ripple"
+            android:elevation="@dimen/elevation_micro"
+            android:text="ripple + elevation micro"
+            android:visibility="gone" />
+
+        <Button
+            style="@style/ButtonLarge"
+            android:background="@drawable/button_ripple_color"
+            android:text="ripple color"
+            android:visibility="gone" />
+
+        <View style="@style/Divider.Horizontal" />
+
+        <Button
+            style="@style/ButtonLarge"
+            android:background="@drawable/custom_btn_android_l_and_older"
+            android:text="custom inset for L and olders" />
+
+    </LinearLayout>
+</ScrollView>

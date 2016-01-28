@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -30,7 +31,7 @@ import android.view.View;
 import com.saulmm.material.R;
 import com.saulmm.material.fragments.SlidingTabFragment;
 
-public class SlidingActivity extends ActionBarActivity {
+public class SlidingActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -61,11 +62,11 @@ public class SlidingActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
 
-                if (mDrawerLayout.isDrawerOpen(Gravity.START)) {
-                    mDrawerLayout.closeDrawer(Gravity.START);
+                if (mDrawerLayout.isDrawerOpen(Gravity.LEFT)) {
+                    mDrawerLayout.closeDrawer(Gravity.LEFT);
 
                 } else {
-                    mDrawerLayout.openDrawer(Gravity.START);
+                    mDrawerLayout.openDrawer(Gravity.LEFT);
                 }
             }
         });

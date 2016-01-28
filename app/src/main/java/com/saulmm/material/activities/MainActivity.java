@@ -12,7 +12,10 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.saulmm.material.R;
+import com.saulmm.material.fragments.CustomizeTouchFeedbackFragment;
 import com.saulmm.material.fragments.HomeFragment;
+import com.saulmm.material.fragments.RevealEffectFragment;
+import com.saulmm.material.fragments.SharedElementFragment1;
 
 public class MainActivity extends AppCompatActivity implements
 	NavigationView.OnNavigationItemSelectedListener {
@@ -21,7 +24,6 @@ public class MainActivity extends AppCompatActivity implements
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-
 		super.onCreate(savedInstanceState);
 		initUI();
 		initToolbar();
@@ -30,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements
 	}
 
 	private void initFragment(Fragment fragment) {
-
 		getSupportFragmentManager().beginTransaction()
 			.replace(R.id.activity_main_container_framelayout, fragment)
 			.commit();
@@ -43,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements
 	}
 
 	private void initToolbar() {
-
 		Toolbar toolbar = (Toolbar) findViewById(R.id.activity_main_toolbar);
 		toolbar.inflateMenu(R.menu.menu_home);
 		toolbar.setNavigationIcon(R.drawable.ic_menu);
@@ -62,14 +62,12 @@ public class MainActivity extends AppCompatActivity implements
 	}
 
 	private void initNavigationView() {
-
 		NavigationView mNavigationView = (NavigationView) findViewById(R.id.activity_main_navigationview);
 		mNavigationView.setNavigationItemSelectedListener(this);
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-
 		if (item.getItemId() == android.R.id.home) {
 			mDrawerLayout.openDrawer(Gravity.START);
 			return true;
@@ -80,17 +78,23 @@ public class MainActivity extends AppCompatActivity implements
 
 	@Override
 	public boolean onNavigationItemSelected(MenuItem menuItem) {
-
 		Fragment nextFragment = null;
 
 		switch (menuItem.getItemId()) {
+			case R.id.nav_custom_touch:
+				nextFragment = new CustomizeTouchFeedbackFragment();
+				break;
+
+			case R.id.nav_reveal_effect:
+				nextFragment = new RevealEffectFragment();
+				break;
 
 			case R.id.drawer_transitions:
 				startActivity(new Intent(MainActivity.this, TransitionFirstActivity.class));
 				break;
 
 			case R.id.nav_elevation_sample:
-				nextFragment = new ElevationFragment();
+				nextFragment = new CardsElevationFragment();
 				break;
 
 			case R.id.nav_circular_sample:
@@ -100,14 +104,22 @@ public class MainActivity extends AppCompatActivity implements
 			case R.id.nav_arrow:
 				startActivity(new Intent(MainActivity.this, SlidingActivity.class));
 				break;
+
+			case R.id.nav_colorful:
+				startActivity(new Intent(MainActivity.this, ColorfulActivity.class));
+				break;
+
+//			case R.id.nav_dialer:
+//				startActivity(new Intent(MainActivity.this, DialerSampleActivity.class));
+//				break;
 		}
 
-		if (nextFragment != null)
+		if (nextFragment != null) {
 			initFragment(nextFragment);
-
+			mDrawerLayout.closeDrawers();
+		}
 
 		menuItem.setChecked(true);
-		mDrawerLayout.closeDrawers();
 		return true;
 	}
 }

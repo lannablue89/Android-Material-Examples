@@ -1,31 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<style name="MaterialExamplesTheme" parent="Theme.AppCompat.Light.NoActionBar">
-		<item name="colorPrimary">@color/primary</item>
-		<item name="colorPrimaryDark">@color/primary_dark</item>
-		<item name="colorAccent">@color/accent</item>
-		<item name="android:windowBackground">@color/gray_light</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/gray_light</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogCustom</item>
+        <!-- custom dialog -->
+        <!--<item name="android:progressBarStyle">@style/ProgressBarCustom</item>&lt;!&ndash; custom progress &ndash;&gt;-->
 
-		<!-- android transitions -->
-		<item name="android:windowContentTransitions">true</item>
-		<item name="android:windowAllowEnterTransitionOverlap">true</item>
-		<item name="android:windowAllowReturnTransitionOverlap">true</item>
-		<item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-	</style>
+        <!-- android transitions -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
 
-	<style name="MainActivityTheme" parent="MaterialExamplesTheme">
-		<item name="android:windowTranslucentStatus">true</item>
-	</style>
+    <style name="theme1" parent="AppTheme">
+        <item name="android:colorPrimary">@color/color_set_1_primary</item>
+        <item name="android:colorControlActivated">@color/color_set_1_accent</item>
+        <item name="android:colorAccent">@color/color_set_1_accent</item>
+    </style>
 
-	<style name="ColorActivityTheme" parent="MaterialExamplesTheme">
-		<item name="android:windowTranslucentStatus">true</item>
+    <style name="theme2" parent="AppTheme">
+        <item name="android:colorPrimary">@color/color_set_2_primary</item>
+        <item name="android:colorControlActivated">@color/color_set_2_accent</item>
+        <item name="android:colorAccent">@color/color_set_2_accent</item>
+    </style>
 
-	</style>
+    <style name="theme3" parent="AppTheme">
+        <item name="android:colorPrimary">@color/color_set_3_primary</item>
+        <item name="android:colorControlActivated">@color/color_set_3_accent</item>
+        <item name="android:colorAccent">@color/color_set_3_accent</item>
+    </style>
 
-	<style name="ColorActivityTheme2" parent="MaterialExamplesTheme">
-		<item name="android:windowBackground">@color/accent</item>
-		<item name="colorPrimaryDark">@color/accent_dark</item>
-	</style>
+    <style name="theme4" parent="AppTheme">
+        <item name="android:colorPrimary">@color/color_set_4_primary</item>
+        <item name="android:colorControlActivated">@color/color_set_4_accent</item>
+        <item name="android:colorAccent">@color/color_set_4_accent</item>
+    </style>
+
+    <!-- -->
+
+    <style name="MaterialExamplesTheme" parent="AppTheme">
+    </style>
+
+    <style name="MainActivityTheme" parent="MaterialExamplesTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="ColorActivityTheme" parent="MaterialExamplesTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="ColorActivityTheme2" parent="MaterialExamplesTheme">
+        <item name="android:windowBackground">@color/accent</item>
+        <item name="colorPrimaryDark">@color/accent_dark</item>
+    </style>
+
+    <!-- Customize Activity Transitions -->
+    <style name="CustomizeTransitionsActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- enable window content transitions -->
+        <!--<item name="android:windowContentTransitions">true</item>-->
+
+        <!-- specify enter and exit transitions -->
+        <!--<item name="android:windowEnterTransition">@android:transition/explode</item>-->
+        <!--<item name="android:windowExitTransition">@android:transition/explode</item>-->
+
+        <!-- specify shared element transitions -->
+        <!--<item name="android:windowSharedElementEnterTransition">@transition/change_image_transform</item>-->
+        <!--<item name="android:windowSharedElementExitTransition">@transition/change_image_transform</item>-->
+    </style>
+
+    <style name="AlertDialogDefault" parent="android:Theme.DeviceDefault.Light.Dialog" />
+
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/green</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DestructiveButton</item>
+    </style>
+
+    <style name="DestructiveButton" parent="android:Widget.DeviceDefault.Button.Borderless">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="ProgressBarDefault" parent="android:Theme.DeviceDefault.Light.Dialog"></style>
 
 </resources>

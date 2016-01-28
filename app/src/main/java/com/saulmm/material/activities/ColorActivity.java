@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import com.saulmm.material.R;
 import com.saulmm.material.utils.AnimatorAdapter;
@@ -16,16 +17,24 @@ public class ColorActivity extends Activity {
 
     public final static int SECOND_ACTIVITY_REQUEST = 1;
     public final static int SECOND_ACTIVITY_END     = 1;
+
     private FloatingActionButton mFab;
     private boolean mReturning;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color);
 
         mFab = (FloatingActionButton) findViewById(R.id.activity_color_fab);
+
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.activity_color_toolbar);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     public void onFabCLick(View view) {
@@ -47,7 +56,7 @@ public class ColorActivity extends Activity {
             if (!mReturning) {
 
                 Intent secondActivityIntent = new Intent(ColorActivity.this, ColorActivity2.class);
-                secondActivityIntent .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                secondActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivityForResult(secondActivityIntent, SECOND_ACTIVITY_REQUEST);
             }
         }

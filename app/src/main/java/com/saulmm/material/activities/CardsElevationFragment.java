@@ -8,13 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.saulmm.material.R;
 
-public class ElevationFragment extends Fragment {
+public class CardsElevationFragment extends Fragment {
 
     @Nullable @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
         Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_elevation, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_cards_elevation, container, false);
         return rootView;
     }
 

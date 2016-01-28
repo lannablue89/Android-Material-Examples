@@ -2,38 +2,57 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 	<group android:checkableBehavior="single">
-		<item
-			android:id="@+id/drawer.transitions"
-			android:icon="@drawable/ic_transitions_grey"
-			android:title="Activity transitions" />
+
 		<item
 			android:id="@+id/nav_elevation_sample"
 			android:icon="@drawable/ic_elevation"
 			android:title="Elevation example" />
 
 		<item
+			android:id="@+id/nav_custom_touch"
+			android:title="Customize Touch"/>
+
+		<item
+			android:id="@+id/nav_reveal_effect"
+			android:title="Reveal Effect"/>
+
+		<item
 			android:id="@+id/nav_circular_sample"
 			android:icon="@drawable/ic_circle"
-			android:title="Reveal sample" />
+			android:title="Reveal Sample" />
+
+		<item
+			android:id="@+id/nav_colorful"
+			android:icon="@drawable/ic_ripple"
+			android:title="Colorful Reveal"/>
+
+		<item
+			android:id="@+id/drawer.transitions"
+			android:icon="@drawable/ic_transitions_grey"
+			android:title="Activity transitions" />
+
+		<!--<item-->
+			<!--android:id="@+id/nav_shared_element"-->
+			<!--android:title="Shared Element"/>-->
 
 		<item
 			android:id="@+id/nav_arrow"
 			android:icon="@drawable/ic_arrow_left"
 			android:title="Sliding arrow" />
 
-		<item
-			android:id="@+id/nav_ripple"
-			android:icon="@drawable/ic_ripple"
-			android:title="Ripple example"/>
+		<!--<item-->
+			<!--android:id="@+id/nav_ripple"-->
+			<!--android:icon="@drawable/ic_ripple"-->
+			<!--android:title="Ripple example"/>-->
 
-		<item
-			android:id="@+id/nav_dialer"
-			android:icon="@drawable/ic_dialer"
-			android:title="Dialer example"/>
+		<!--<item-->
+			<!--android:id="@+id/nav_dialer"-->
+			<!--android:icon="@drawable/ic_dialer"-->
+			<!--android:title="Dialer example"/>-->
 
-		<item
-			android:id="@+id/nav_tab"
-			android:icon="@drawable/ic_tab"
-			android:title="Tab layout"/>
+		<!--<item-->
+			<!--android:id="@+id/nav_tab"-->
+			<!--android:icon="@drawable/ic_tab"-->
+			<!--android:title="Tab layout"/>-->
 	</group>
 </menu>

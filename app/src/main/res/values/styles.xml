@@ -21,7 +21,7 @@
 	<style name="SampleCard">
 		<item name="android:minWidth">100dp</item>
 		<item name="android:minHeight">96dp</item>
-		<item name="android:elevation">2dp</item>
+		<item name="android:elevation">4dp</item>
 		<item name="android:clickable">true</item>
 		<item name="android:stateListAnimator">@drawable/translation_selector</item>
 	</style>
@@ -47,5 +47,84 @@
 		<item name="navigationIcon">@drawable/abc_ic_ab_back_mtrl_am_alpha</item>
 	</style>
 
+
+	<!-- animation -->
+
+	<style name="MaterialAnimations" parent="@style/Theme.AppCompat.Light.NoActionBar">
+		<item name="android:colorPrimary">@color/material_animations_primary</item>
+		<item name="android:colorPrimaryDark">@color/material_animations_primary_dark</item>
+		<item name="android:colorAccent">@color/material_animations_accent</item>
+		<item name="android:textColorPrimary">@android:color/black</item>
+		<item name="android:textColorPrimaryInverse">@color/text_light</item>
+		<item name="android:statusBarColor">@color/material_animations_primary_dark</item>
+		<item name="android:textColor">@color/text_dark</item>
+		<item name="android:windowContentTransitions">true</item>
+		<item name="android:windowAllowEnterTransitionOverlap">false</item>
+		<item name="android:windowAllowReturnTransitionOverlap">false</item>
+		<item name="android:titleTextAppearance">@style/MaterialAnimations.TextAppearance.Title</item>
+		<item name="android:windowBackground">@color/light_grey</item>
+	</style>
+
+	<style name="MaterialAnimations.TextAppearance.Title" parent="android:TextAppearance.Material.Title">
+		<item name="android:textColor">?android:textColorPrimary</item>
+	</style>
+
+	<style name="MaterialAnimations.TextAppearance.Title.Inverse" parent="android:TextAppearance.Material.Title">
+		<item name="android:textColor">?android:textColorPrimaryInverse</item>
+	</style>
+
+	<style name="MaterialAnimations.Text.Body" parent="Base.TextAppearance.AppCompat.Medium">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_margin">@dimen/spacing_medium</item>
+		<item name="android:padding">@dimen/spacing_medium</item>
+	</style>
+
+	<style name="MaterialAnimations.Icon">
+		<item name="android:layout_margin">10dp</item>
+	</style>
+
+	<style name="MaterialAnimations.Icon.Big">
+		<item name="android:layout_width">150dp</item>
+		<item name="android:layout_height">150dp</item>
+	</style>
+
+	<style name="MaterialAnimations.Icon.Small">
+		<item name="android:layout_width">48dp</item>
+		<item name="android:layout_height">48dp</item>
+	</style>
+
+	<style name="MaterialAnimations.Button" parent="Base.Widget.AppCompat.Button">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_margin">@dimen/spacing_medium</item>
+	</style>
+
+	<style name="ButtonLarge">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">@dimen/btn_height_large</item>
+		<item name="android:layout_margin">5dp</item>
+	</style>
+
+	<style name="ImageSquareLarge">
+		<item name="android:layout_width">@dimen/image_square_large</item>
+		<item name="android:layout_height">@dimen/image_square_large</item>
+		<item name="android:layout_margin">5dp</item>
+	</style>
+
+	<style name="Divider">
+		<item name="android:background">@color/light_grey</item>
+		<item name="android:layout_margin">5dp</item>
+	</style>
+
+	<style name="Divider.Horizontal">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">1dp</item>
+	</style>
+
+	<style name="Divider.Vertical">
+		<item name="android:layout_width">1dp</item>
+		<item name="android:layout_height">match_parent</item>
+	</style>
 
 </resources>

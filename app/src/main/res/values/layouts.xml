@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="activity_customize_transitions3" type="layout">@layout/activity_customize_transitions1</item>
+
+</resources>
