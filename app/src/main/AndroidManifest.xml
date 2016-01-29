@@ -39,7 +39,7 @@
 
 
         <!-- lanna -->
-        <activity android:name=".activities.MaterialResourcesActivity" >
+        <activity android:name=".activities.ShareElementActivity" >
         </activity>
 
 

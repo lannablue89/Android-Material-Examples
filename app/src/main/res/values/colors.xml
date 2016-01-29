@@ -7,9 +7,6 @@
     <color name="accent">#EEFF41</color>
     <color name="accent_dark">#8F9A17</color>
 
-    <color name="material_animations_accent">@color/accent</color>
-    <color name="material_animations_primary">@color/primary</color>
-    <color name="material_animations_primary_dark">@color/primary_dark</color>
     <color name="text_dark">@color/black</color>
     <color name="text_light">@color/gray_light</color>
 

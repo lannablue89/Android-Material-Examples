@@ -5,6 +5,8 @@ import android.app.Fragment;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.transition.ChangeBounds;
 import android.transition.Slide;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,19 +56,23 @@ public class SharedElementFragment1 extends Fragment {
         return view;
     }
 
+
     private void addNextFragment(Sample sample, ImageView squareBlue, boolean overlap) {
         SharedElementFragment2 sharedElementFragment2 = SharedElementFragment2.newInstance(sample);
 
         Slide slideTransition = new Slide(Gravity.RIGHT);
         slideTransition.setDuration(getResources().getInteger(R.integer.anim_duration_medium));
 
-        ChangeBounds changeBoundsTransition = new ChangeBounds();
+        Transition changeBoundsTransition = TransitionInflater.from(getActivity())
+                .inflateTransition(R.transition.change_image_transform);
+//        ChangeBounds changeBoundsTransition = new ChangeBounds();
         changeBoundsTransition.setDuration(getResources().getInteger(R.integer.anim_duration_medium));
 
         sharedElementFragment2.setEnterTransition(slideTransition);
-        sharedElementFragment2.setAllowEnterTransitionOverlap(overlap);
-        sharedElementFragment2.setAllowReturnTransitionOverlap(overlap);
         sharedElementFragment2.setSharedElementEnterTransition(changeBoundsTransition);
+
+        sharedElementFragment2.setAllowEnterTransitionOverlap(overlap); // checking
+        sharedElementFragment2.setAllowReturnTransitionOverlap(overlap); // checking
 
         getFragmentManager().beginTransaction()
                 .replace(R.id.container, sharedElementFragment2)

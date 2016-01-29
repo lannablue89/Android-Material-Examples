@@ -13,7 +13,7 @@ import com.saulmm.material.utils.AnimatorAdapter;
 public class ColorActivity extends Activity {
 
     public final static float SCALE_FACTOR          = 20f;
-    public final static int ANIMATION_DURATION      = 300;
+    public final static int ANIMATION_DURATION      = 350;
 
     public final static int SECOND_ACTIVITY_REQUEST = 1;
     public final static int SECOND_ACTIVITY_END     = 1;

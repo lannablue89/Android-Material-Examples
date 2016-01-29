@@ -15,7 +15,6 @@ import com.saulmm.material.R;
 import com.saulmm.material.fragments.CustomizeTouchFeedbackFragment;
 import com.saulmm.material.fragments.HomeFragment;
 import com.saulmm.material.fragments.RevealEffectFragment;
-import com.saulmm.material.fragments.SharedElementFragment1;
 
 public class MainActivity extends AppCompatActivity implements
 	NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements
 		initToolbar();
 		initNavigationView();
 		initFragment(new HomeFragment());
+        mDrawerLayout.openDrawer(Gravity.START);
 	}
 
 	private void initFragment(Fragment fragment) {
@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements
 	}
 
 	private void initUI() {
-
 		setContentView(R.layout.activity_main);
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.activity_main_drawerlayout);
 	}
@@ -93,9 +92,9 @@ public class MainActivity extends AppCompatActivity implements
 				startActivity(new Intent(MainActivity.this, TransitionFirstActivity.class));
 				break;
 
-			case R.id.nav_elevation_sample:
-				nextFragment = new CardsElevationFragment();
-				break;
+//			case R.id.nav_elevation_sample:
+//				nextFragment = new CardsElevationFragment();
+//				break;
 
 			case R.id.nav_circular_sample:
 				startActivity(new Intent(MainActivity.this, ColorActivity.class));
@@ -108,6 +107,10 @@ public class MainActivity extends AppCompatActivity implements
 			case R.id.nav_colorful:
 				startActivity(new Intent(MainActivity.this, ColorfulActivity.class));
 				break;
+
+            case R.id.nav_shared_element:
+                startActivity(new Intent(MainActivity.this, ShareElementActivity.class));
+                break;
 
 //			case R.id.nav_dialer:
 //				startActivity(new Intent(MainActivity.this, DialerSampleActivity.class));

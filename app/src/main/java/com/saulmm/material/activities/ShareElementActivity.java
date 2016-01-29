@@ -9,7 +9,7 @@ import com.saulmm.material.fragments.SharedElementFragment1;
 /**
  * Created by lanna on 10/6/15.
  */
-public class MaterialResourcesActivity extends Activity {
+public class ShareElementActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -9,6 +9,7 @@ import android.transition.Explode;
 import android.transition.Fade;
 import android.transition.Slide;
 import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.util.Pair;
 import android.view.Gravity;
 import android.view.View;
@@ -51,7 +52,8 @@ public class TransitionFirstActivity extends Activity
 
         ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
             TransitionFirstActivity.this, Pair.create(mFabButton, "fab"),
-            Pair.create(mToolbar, "holder1"));
+            Pair.create(mToolbar, "holder1")
+        );
 
         startActivity(i, transitionActivityOptions.toBundle());
     }
@@ -99,7 +101,9 @@ public class TransitionFirstActivity extends Activity
     }
 
     public Transition createExplodeTransition(int [] excludeIds) {
-        Explode explodeTransition = new Explode();
+        Transition explodeTransition = TransitionInflater.from(this)
+                .inflateTransition(android.R.transition.explode);
+//        Explode explodeTransition = new Explode();
 
         for (int excludeViewId : excludeIds)
             explodeTransition.excludeTarget(excludeViewId, true);

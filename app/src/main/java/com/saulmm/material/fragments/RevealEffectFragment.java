@@ -66,12 +66,12 @@ public class RevealEffectFragment extends Fragment {
 
     private void onViewReady() {
         // get the center for the clipping circle
-        cx = 0;
-        cy = 0;
+//        cx = 0;
+//        cy = 0;
 //        cx = myView.getWidth();
 //        cy = myView.getHeight();
-//        cx = myView.getWidth() / 2;
-//        cy = myView.getHeight() / 2;
+        cx = myView.getWidth() / 2;
+        cy = myView.getHeight() / 2;
         show();
     }
 
